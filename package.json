@@ -7,5 +7,9 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Felix Itzenplitz",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cebor/es-promisify.git"
+  },
   "license": "MIT"
 }
