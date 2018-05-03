@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/cebor/es-promisify.svg?branch=master)](https://travis-ci.org/cebor/es-promisify)
 
-This library enables node-styled functions to work as [Promise]()s through the use of ES2015 syntax.
+This library enables node-styled functions to work as [Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_objects/Promise)s through the use of ES2015 syntax.
 
 ## Examples
 
@@ -87,10 +87,9 @@ class Bindable {
     }
 }
 
-let bindable = new Bindable();
-let incrementPromise = Promisify(bindable.increment, bindable);
-
 async function main () {
+    let bindable = new Bindable();
+    let incrementPromise = Promisify(bindable.increment, bindable);
     console.log(await incrementPromise());
 }
 
