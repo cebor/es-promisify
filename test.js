@@ -1,5 +1,6 @@
 'use strict';
 
+const assert = require('assert');
 const Promisify = require('.');
 
 // Test a promise that returns a single value
