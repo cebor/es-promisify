@@ -1,5 +1,7 @@
 # ES2015 Promisify Library
 
+[![NPM version](https://img.shields.io/npm/v/es-promisify.svg)](https://npmjs.org/package/es-promisify)
+[![NPM downloads](https://img.shields.io/npm/dt/es-promisify.svg)](https://npmjs.org/package/es-promisify)
 [![Build Status](https://travis-ci.org/cebor/es-promisify.svg?branch=master)](https://travis-ci.org/cebor/es-promisify)
 
 This library enables node-styled functions to work as [Promise](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_objects/Promise)s through the use of ES2015 syntax.
