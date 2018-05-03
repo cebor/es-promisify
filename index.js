@@ -1,10 +1,15 @@
-function promisify(original) {
+'use strict';
+
+function Promisify (original, thisArg = null) {
     return function (...args) {
         return new Promise(function (resolve, reject) {
-            function callback(err, ...values) {
-                if (err) return reject(err);
+            function callback (error, ...values) {
+                // Reject if error is present
+                if (error !== undefined && error !== null) {
+                    return reject(error);
+                }
 
-                // resolve multiple success values
+                // Resolve multiple success values
                 if (values.length > 1) {
                     return resolve(values);
                 }
@@ -12,9 +17,11 @@ function promisify(original) {
                 resolve(values[0]);
             }
 
-            original(...args, callback); // spread operator: same as `original.apply(original, args)`
+            // Calls the original function, optionally binding 
+            // it to a `this` scope.
+            original.apply(thisArg, [...args, callback]);
         });
     };
 }
 
-module.exports = promisify;
+module.exports = Promisify;
