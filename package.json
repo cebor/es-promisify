@@ -1,6 +1,6 @@
 {
   "name": "es-promisify",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "Enables node-styled functions to work as promises",
   "main": "index.js",
   "scripts": {
